@@ -1,16 +1,21 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\RegisterController; // 1. Pastikan baris ini ada di atas!
 
+// 1. Halaman Login Utama (Akses lewat 127.0.0.1:8000/ atau /login)
 Route::get('/', function () {
+    return view('welcome'); // Membuka file welcome.blade.php yang ada di folder views
+});
+Route::get('/login', function () {
     return view('welcome');
 });
 
-// 2. Cek baris 9 punya Risal, pastikan strukturnya pakai kurung siku [] dan koma yang bener kayak gini:
-Route::get('/register', [RegisterController::class, 'showRegister'])->name('register');
-Route::post('/register', [RegisterController::class, 'register']);
-use App\Http\Controllers\LoginController;
+// 2. Halaman Register (Membuka file register yang baru dibuat di dalam folder auth)
+Route::get('/register', function () {
+    return view('auth.register');
+});
 
-Route::get('/login', [LoginController::class, 'showLogin'])->name('login');
-Route::post('/login', [LoginController::class, 'login']);
+// 3. Halaman Dashboard (Membuka file dashboard.blade.php yang ada di folder views)
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});

@@ -9,7 +9,7 @@
     <div class="register-container">
         <h2>Form Pendaftaran Akun</h2>
 
-        <form action="/" method="GET">
+        <form action="/Login" method="GET">
             @csrf
             
             <div class="input-group">
