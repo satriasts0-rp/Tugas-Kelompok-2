@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,7 +20,7 @@
             </div>
         @endif
 
-        <form action="{{ route('login') }}" method="POST" class="space-y-4">
+        <form action="/dashboard" method="GET" class="space-y-4">
             @csrf 
 
             <div>
@@ -47,4 +47,4 @@
     </div>
 
 </body>
-</html>
+</html> -->
