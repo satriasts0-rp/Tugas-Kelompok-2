@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegisterController; // 1. Pastikan baris ini ada di atas!
 
 // Menampilkan halaman login (welcome.blade.php) saat pertama dibuka
 Route::get('/', function () {
